@@ -1,25 +1,25 @@
-import React, { useCallback, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {
-  AppBar,
-  Button,
-  CircularProgress,
-  Container,
-  IconButton,
-  LinearProgress,
-  Toolbar,
-  Typography,
-} from "@mui/material";
 import { Menu } from "@mui/icons-material";
-import { Login } from "features/auth/ui/Login";
-import "./App.css";
-import { TodolistsList } from "features/TodolistsList/ui/TodolistsList";
+import {
+	AppBar,
+	Button,
+	CircularProgress,
+	Container,
+	IconButton,
+	LinearProgress,
+	Toolbar,
+	Typography,
+} from "@mui/material";
+import { selectAppStatus, selectIsInitialized } from "app/app.selectors";
 import { ErrorSnackbar } from "common/components";
 import { useAppDispatch } from "common/hooks";
+import { TodolistsList } from "features/TodolistsList/ui/TodolistsList";
 import { selectIsLoggedIn } from "features/auth/model/auth.selectors";
-import { selectAppStatus, selectIsInitialized } from "app/app.selectors";
 import { authThunks } from "features/auth/model/auth.slice";
+import { Login } from "features/auth/ui/Login";
+import React, { useCallback, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   const status = useSelector(selectAppStatus);
@@ -45,7 +45,6 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
       <div className="App">
         <ErrorSnackbar />
         <AppBar position="static">
@@ -69,7 +68,6 @@ function App() {
           </Routes>
         </Container>
       </div>
-    </BrowserRouter>
   );
 }
 
