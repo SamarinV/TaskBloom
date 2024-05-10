@@ -15,7 +15,4 @@ export const todolistsApi = {
   updateTodolist(arg: UpdateTodolistTitleArgType) {
     return instance.put<BaseResponseType>(`todo-lists/${arg.id}`, { title: arg.title });
   },
-  
 };
-
-export { TodolistType };
