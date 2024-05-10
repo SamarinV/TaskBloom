@@ -17,3 +17,5 @@ export const todolistsApi = {
   },
   
 };
+
+export { TodolistType };
