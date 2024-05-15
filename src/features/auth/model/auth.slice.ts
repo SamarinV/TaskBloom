@@ -28,6 +28,7 @@ const login = createAppAsyncThunk<{ isLoggedIn: boolean }, LoginParamsType>(
   async (arg, { rejectWithValue }) => {
     const res = await authAPI.login(arg);
     if (res.data.resultCode === 0) {
+			localStorage.setItem("sn-token", res.data.data.token);
       return { isLoggedIn: true };
     } else {
       return rejectWithValue(res.data);
