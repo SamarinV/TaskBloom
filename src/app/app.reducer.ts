@@ -35,7 +35,6 @@ const slice = createSlice({
     });
     builder.addMatcher(isRejected, (state, action: any) => {
       state.status = "failed";
-			debugger;
       if (action.payload) {
         if (
           action.type === todolistsThunks.addTodolist.rejected.type ||

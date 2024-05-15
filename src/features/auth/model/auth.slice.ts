@@ -42,6 +42,7 @@ const logout = createAppAsyncThunk<{ isLoggedIn: boolean }, undefined>(
     const res = await authAPI.logout();
     if (res.data.resultCode === 0) {
       dispatch(clearTasksAndTodolists());
+			localStorage.clear();
       return { isLoggedIn: false };
     } else {
       return rejectWithValue(res.data);
