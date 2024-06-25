@@ -1,2 +1,1 @@
-
-gh-page: https://samarinv.github.io/todolist/
+TaskBloom - проект для эффективного планирования задач
