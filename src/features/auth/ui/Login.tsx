@@ -35,6 +35,10 @@ export const Login = () => {
     },
   });
 
+	const loginTestAccount = () => {
+		dispatch(authThunks.login({email: 'v.a.samarin@yandex.ru', password: 'test123', rememberMe: false}));
+	}
+
   if (isLoggedIn) {
     return <Navigate to={"/"} />;
   }
@@ -47,13 +51,13 @@ export const Login = () => {
             <FormLabel>
               <p>
                 To log in get registered{" "}
-                <a href={"https://social-network.samuraijs.com/"} target={"_blank"}>
+                <a href={"https://social-network.samuraijs.com/signUp"} target={"_blank"}>
                   here
                 </a>
               </p>
-              <p>or use common test account credentials:</p>
-              <p> Email: free@samuraijs.com</p>
-              <p>Password: free</p>
+              <p>
+                or use common <span style={{color: 'blue', cursor: 'pointer'}} onClick={loginTestAccount}>test account</span>:
+              </p>
             </FormLabel>
             <FormGroup>
               <TextField label="Email" margin="normal" {...formik.getFieldProps("email")} />

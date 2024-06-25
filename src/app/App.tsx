@@ -1,13 +1,13 @@
 import { Menu } from "@mui/icons-material";
 import {
-	AppBar,
-	Button,
-	CircularProgress,
-	Container,
-	IconButton,
-	LinearProgress,
-	Toolbar,
-	Typography,
+  AppBar,
+  Button,
+  CircularProgress,
+  Container,
+  IconButton,
+  LinearProgress,
+  Toolbar,
+  Typography,
 } from "@mui/material";
 import { selectAppStatus, selectIsInitialized } from "app/app.selectors";
 import { ErrorSnackbar } from "common/components";
@@ -45,29 +45,26 @@ function App() {
   }
 
   return (
-      <div className="App">
-        <ErrorSnackbar />
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <Menu />
-            </IconButton>
-            <Typography variant="h6">News</Typography>
+    <div className="App">
+      <ErrorSnackbar />
+      <AppBar position="static">
+        <Toolbar>
+            <Typography variant="h6">TaskBloom</Typography>
             {isLoggedIn && (
               <Button color="inherit" onClick={logoutHandler}>
                 Log out
               </Button>
             )}
-          </Toolbar>
-          {status === "loading" && <LinearProgress />}
-        </AppBar>
-        <Container fixed>
-          <Routes>
-            <Route path={"/"} element={<TodolistsList />} />
-            <Route path={"/login"} element={<Login />} />
-          </Routes>
-        </Container>
-      </div>
+        </Toolbar>
+        {status === "loading" && <LinearProgress />}
+      </AppBar>
+      <Container fixed>
+        <Routes>
+          <Route path={"/"} element={<TodolistsList />} />
+          <Route path={"/login"} element={<Login />} />
+        </Routes>
+      </Container>
+    </div>
   );
 }
 
