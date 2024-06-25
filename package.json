@@ -1,6 +1,6 @@
 {
-  "name": "todolist",
-  "homepage": "https://SamarinV.github.io/todolist",
+  "name": "taskbloom",
+  "homepage": "https://SamarinV.github.io/taskbloom",
   "jest": {
     "moduleNameMapper": {
       "axios": "axios/dist/node/axios.cjs"
