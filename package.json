@@ -1,6 +1,6 @@
 {
   "name": "taskbloom",
-  "homepage": "https://SamarinV.github.io/taskbloom",
+  "homepage": "https://SamarinV.github.io/TaskBloom",
   "jest": {
     "moduleNameMapper": {
       "axios": "axios/dist/node/axios.cjs"
