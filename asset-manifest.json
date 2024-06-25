@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/taskbloom/static/css/main.e6c13ad2.css",
-    "main.js": "/taskbloom/static/js/main.a85bb1ea.js",
-    "index.html": "/taskbloom/index.html",
-    "main.e6c13ad2.css.map": "/taskbloom/static/css/main.e6c13ad2.css.map",
-    "main.a85bb1ea.js.map": "/taskbloom/static/js/main.a85bb1ea.js.map"
+    "main.css": "/TaskBloom/static/css/main.e6c13ad2.css",
+    "main.js": "/TaskBloom/static/js/main.a85bb1ea.js",
+    "index.html": "/TaskBloom/index.html",
+    "main.e6c13ad2.css.map": "/TaskBloom/static/css/main.e6c13ad2.css.map",
+    "main.a85bb1ea.js.map": "/TaskBloom/static/js/main.a85bb1ea.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
